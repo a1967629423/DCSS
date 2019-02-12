@@ -1,0 +1,73 @@
+*{
+    color: rgb(20, 20, 20);  
+}
+html,body {
+    margin: 0;
+}
+.导航栏容器
+{
+    height: 63px;
+}
+.导航栏
+{
+    position: fixed;
+    top: 0px;
+    height: 63px;
+    background-color: rgb(210, 210, 210);
+    border: 1px;
+    border-color: rgb(10, 10, 10);
+    border-style: solid;
+    width:100%;
+}
+
+.导航栏 label{
+    height: 100%;
+    text-align: center;
+}
+.包络器{
+    margin: 0 10px;
+}
+.包络器:before{
+    height: 1px;
+    width:100%;
+    display: block;
+    content: close-quote;
+    background-color: rgb(40, 40, 40);
+}
+.底部{
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+.容器{
+
+}
+.小动画{
+    background: red;
+    height: 100px;
+}
+.小动画:hover{
+    animation: test 600ms;
+    animation-fill-mode: forwards;
+}
+/*
+dajsdlkajdqwiueiqoe
+zxczxcz
+*/
+//asdjkladq
+@keyframes test{
+    from {
+        height: 100px;
+        filter: blur(0px);
+    }
+    50% {
+        height: 200px;
+        filter: blur(10px);
+    }
+    to
+    {
+        height: 100px;
+        filter: blur(0px);
+    }
+}
+
