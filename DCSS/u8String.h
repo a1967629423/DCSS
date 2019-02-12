@@ -53,6 +53,7 @@ public:
 	protected:
 		int checkUTF8_string(char utf)
 		{
+			if (!u8_count(utf, 1))return 0;
 			if (u8_count(utf, 3))return 3;
 			if (u8_count(utf, 2))return 2;
 			if (u8_count(utf, 1))return 1;

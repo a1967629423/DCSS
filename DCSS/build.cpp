@@ -28,8 +28,12 @@ bool build::step1()
 	regex removeAllSpace(string("[ \\f\\r\\t\\v]"));
 	auto result1 = regex_replace(source, removeNoteRegex,string());
 	Tools::regex_match_ex(result1, string("[^\\n]*"), [&](string str) {
-		vector<wchar_t> vc = vector<wchar_t>();
-		string utf8str = UTF8_To_string(str);		
+		vector<string> vc = vector<string>();
+		u8String u8(str);
+		for (auto item :u8)
+		{
+			vc.push_back(item);
+		}
 		sourceFormat.push_back(vc);
 		//添加行号与列号
 		cout << to_string((int)sourceFormat.size()) + "." + str << endl;

@@ -25,7 +25,7 @@ protected:
 	 */
 	bool step3();
 	void SetErrorInfo(int _code, string attachInfo);
-	vector<vector<wchar_t>> sourceFormat;
+	vector<vector<string>> sourceFormat;
 	string ErrorInfo;
 };
 
